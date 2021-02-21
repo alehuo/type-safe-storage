@@ -1,0 +1,27 @@
+{
+  "name": "type-safe-local-storage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.12.17",
+    "@babel/preset-typescript": "^7.12.17",
+    "@types/jest": "^26.0.20",
+    "jest": "^26.6.3",
+    "jest-localstorage-mock": "^2.4.6",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.5"
+  },
+  "dependencies": {
+    "fp-ts": "^2.9.5",
+    "io-ts": "^2.2.14"
+  }
+}
