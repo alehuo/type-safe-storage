@@ -1,1 +1,1 @@
-export * from "./typeSafeLocalStorage";
+export * from "./typeSafeStorage";

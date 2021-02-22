@@ -1,6 +1,6 @@
 import {
   typeSafeLocalStorage as localStorage,
-  withCustomStorage,
+  CustomStorage,
 } from "../src/index";
 import * as t from "io-ts";
 import { isRight } from "fp-ts/lib/These";
@@ -113,9 +113,25 @@ describe("withCustomStorage", () => {
     storage.setItem("testi2", "testvalue2");
     storage.setItem("testi3", "testvalue3");
     storage.setItem("testi4", "testvalue4");
-    const mockStorage = withCustomStorage(storage);
+    const mockStorage = new CustomStorage(storage);
     expect(mockStorage.length).toEqual(4);
     mockStorage.clear();
     expect(mockStorage.length).toEqual(0);
+  });
+  it("Should work with proxy", () => {
+    expect(localStorage.length).toEqual(0);
+    // @ts-expect-error
+    localStorage.hello = "world";
+    expect(localStorage.length).toEqual(1);
+    // @ts-expect-error
+    expect(localStorage.getItem("hello", t.string).right).toStrictEqual(
+      "world"
+    );
+    // @ts-expect-error
+    expect(localStorage.hello).toStrictEqual("world");
+  });
+  it("Should return null with proxy if the key is non-existent", () => {
+    // @ts-expect-error
+    expect(localStorage.hello).toStrictEqual(null);
   });
 });

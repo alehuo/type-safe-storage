@@ -1,15 +1,15 @@
-# type-safe-local-storage
+# type-safe-storage
 
 ## Introduction
 
-This library wraps the browser's localStorage functionality to provide run-time type-checking of the values that are set and get from the localStorage object.
+This library wraps the browser's localStorage and sessionStorage functionality to provide run-time type-checking of the values that are set and get from the sessionStorage and localStorage object.
 
-This library adds a new parameter to the `setItem()` and `getItem()` functions. The user must now pass an `io-ts` codec which is used to validate the data coming from and going to the browser's local storage.
+This library adds a new parameter to the `setItem()` and `getItem()` functions which is used to pass an `io-ts` codec. The codec is used to validate the data coming from and going to the browser's local storage.
 
 ## Installation
 
 ```
-npm install --save type-safe-local-storage fp-ts@2.9.5 io-ts@2.2.14
+npm install --save type-safe-storage fp-ts@2.9.5 io-ts@2.2.14
 ```
 
 ## Implemented methods
@@ -35,7 +35,7 @@ npm install --save type-safe-local-storage fp-ts@2.9.5 io-ts@2.2.14
 ### setItem & getItem
 
 ```typescript
-import { typeSafeLocalStorage as localStorage } from "type-safe-local-storage";
+import { typeSafeLocalStorage as localStorage } from "type-safe-storage";
 import * as t from "io-ts";
 import { isRight } from "fp-ts/lib/either";
 

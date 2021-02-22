@@ -1,5 +1,5 @@
 {
-  "name": "type-safe-local-storage",
+  "name": "type-safe-storage",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -9,8 +9,11 @@
     "build": "tsc"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Aleksi Huotala",
+    "email": "aleksi.huotala@reaktor.com"
+  },
+  "license": "MIT",
   "devDependencies": {
     "@babel/preset-env": "^7.12.17",
     "@babel/preset-typescript": "^7.12.17",
@@ -18,7 +21,8 @@
     "jest": "^26.6.3",
     "jest-localstorage-mock": "^2.4.6",
     "ts-node": "^9.1.1",
-    "typescript": "^4.1.5"
+    "typescript": "^4.1.5",
+    "webpack": "^5.23.0"
   },
   "dependencies": {
     "fp-ts": "^2.9.5",
