@@ -3,3 +3,6 @@ coverage
 tsconfig.tsbuildinfo
 src
 test
+babel.config.js
+jest.config.ts
+tsconfig.json
