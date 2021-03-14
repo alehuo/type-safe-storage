@@ -1,0 +1,5 @@
+__setups__
+coverage
+tsconfig.tsbuildinfo
+src
+test

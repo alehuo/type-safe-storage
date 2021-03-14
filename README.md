@@ -9,7 +9,7 @@ This library adds a new parameter to the `setItem()` and `getItem()` functions w
 ## Installation
 
 ```
-npm install --save type-safe-storage fp-ts@2.9.5 io-ts@2.2.14
+npm install --save @alehuo/type-safe-storage fp-ts@2.9.5 io-ts@2.2.14
 ```
 
 ## Implemented methods
@@ -35,7 +35,7 @@ npm install --save type-safe-storage fp-ts@2.9.5 io-ts@2.2.14
 ### setItem & getItem
 
 ```typescript
-import { typeSafeLocalStorage as localStorage } from "type-safe-storage";
+import { typeSafeLocalStorage as localStorage } from "@alehuo/type-safe-storage";
 import * as t from "io-ts";
 import { isRight } from "fp-ts/lib/either";
 
